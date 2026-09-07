@@ -58,7 +58,7 @@ export default function PakWatchPage() {
         filters.province !== "All" ? filters.province : undefined,
         20,
       );
-      let updates = (data.results || []) as unknown as GovernmentUpdate[];
+      let updates = (data.updates || []) as unknown as GovernmentUpdate[];
       if (filters.importance !== "All") {
         updates = updates.filter((u) => u.importance === filters.importance);
       }
