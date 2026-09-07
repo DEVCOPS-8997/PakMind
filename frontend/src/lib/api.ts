@@ -101,10 +101,14 @@ export interface WatchSearchResult {
 
 export interface HotTopic {
   topic: string;
-  summary: string;
-  key_changes: string[];
-  affected_groups: string[];
-  generated_at: string;
+  query?: string | null;
+  answer: string | null;
+  what_changed: string | null;
+  who_affected: string | null;
+  effective_date: string | null;
+  confidence: "high" | "medium" | "low";
+  generated_at: string | null;
+  model?: string | null;
 }
 
 export interface CategoryCount {
