@@ -225,7 +225,7 @@ export async function getLatestUpdates(
   category?: string,
   province?: string,
   limit?: number
-): Promise<{ results: Record<string, unknown>[] }> {
+): Promise<{ updates: Record<string, unknown>[]; count?: number }> {
   const params = new URLSearchParams();
   if (category) params.set("category", category);
   if (province) params.set("province", province);
